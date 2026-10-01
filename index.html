@@ -4,71 +4,44 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tango Coordinator</title>
-  <meta name="description" content="A WhatsApp booking assistant for tango teachers. Students book lessons by message; teachers see who is coming.">
+  <meta name="description" content="Tango Coordinator: software for tango schools.">
   <style>
-    :root {
-      --bg: #faf7f5; --card: #ffffff; --text: #221a1a; --muted: #6f6464;
-      --accent: #9e1b32; --line: #ece4e1;
-    }
+    :root { --bg: #faf7f5; --text: #221a1a; --muted: #6f6464; --accent: #9e1b32; --line: #ece4e1; }
     @media (prefers-color-scheme: dark) {
-      :root { --bg: #171213; --card: #221b1c; --text: #f3ecea; --muted: #b3a7a5; --accent: #e0566c; --line: #3a3031; }
+      :root { --bg: #171213; --text: #f3ecea; --muted: #b3a7a5; --accent: #e0566c; --line: #3a3031; }
     }
     * { box-sizing: border-box; }
     body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
     main { max-width: 42rem; margin: 0 auto; padding: 3rem 1rem 4rem; }
     header { border-left: 5px solid var(--accent); padding-left: 1rem; margin-bottom: 2.5rem; }
-    h1 { font-size: 2.2rem; line-height: 1.15; margin: 0 0 0.5rem; }
+    h1 { font-size: 2.2rem; line-height: 1.15; margin: 0 0 .5rem; }
     .tagline { font-size: 1.15rem; color: var(--muted); margin: 0; }
-    h2 { font-size: 1.25rem; margin: 2.5rem 0 0.75rem; color: var(--accent); }
+    h2 { font-size: 1.25rem; margin: 2.5rem 0 .75rem; color: var(--accent); }
     ol { padding-left: 1.3rem; }
-    li { margin-bottom: 0.5rem; }
-    .example { background: var(--card); border: 1px solid var(--line); border-radius: 0.75rem; padding: 1rem 1.1rem; margin: 1rem 0; }
-    .example p { margin: 0.3rem 0; }
-    .from { font-weight: 600; }
-    .pilot { background: var(--card); border: 1px solid var(--line); border-radius: 0.75rem; padding: 1rem 1.1rem; }
+    li { margin-bottom: .5rem; }
     a { color: var(--accent); }
-    footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+    footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
   </style>
 </head>
 <body>
 <main>
   <header>
     <h1>Tango Coordinator</h1>
-    <p class="tagline">A WhatsApp booking assistant for tango teachers.</p>
+    <p class="tagline">Software for tango schools.</p>
   </header>
-
-  <p>Tango Coordinator lets students tell their teacher whether they are coming to class by sending an ordinary WhatsApp message. The assistant records the booking and confirms it, and the teacher always has an up-to-date list of who is coming.</p>
-
-  <div class="example" aria-label="Example conversation">
-    <p><span class="from">Student:</span> I'll come on Thursday and bring my partner</p>
-    <p><span class="from">Tango Coordinator:</span> Great, you're booked for <em>Intermediate milonga, Thursday 8 October at 19:00</em>, plus 1 guest.</p>
-  </div>
-
-  <h2>How it works</h2>
-  <ol>
-    <li>The teacher adds their upcoming lessons.</li>
-    <li>Students message the school's WhatsApp number in plain language: going, not going, maybe, or bringing a partner.</li>
-    <li>The assistant updates the booking and confirms it back to the student.</li>
-    <li>Each lesson has a private attendance page showing who is going, so the teacher can plan the class.</li>
-  </ol>
-  <p>The assistant only handles lesson bookings. It is automated, and it says so if asked.</p>
-
-  <h2>Currently in use</h2>
-  <p class="pilot">Tango Coordinator is currently being piloted with <strong>Laisa Souza's</strong> online tango classes.</p>
-
-  <h2 id="privacy">Privacy</h2>
-  <p>We keep only what is needed to manage bookings:</p>
-  <ol>
-    <li>the student's WhatsApp number and <strong>first name only</strong> (we never store surnames),</li>
-    <li>their lesson bookings, and</li>
-    <li>recent messages, so the assistant can follow the conversation.</li>
-  </ol>
-  <p>If you ask for reminders and updates, we keep your number and first name so we can send them, until you reply STOP. 
-Messages are deleted after 7 days, and bookings 90 days after the lesson. Attendance pages show first names only, never phone numbers. We do not sell data, show adverts or use tracking. Messages are processed by our service providers, Meta (WhatsApp) and Anthropic (the AI that reads the messages), only to provide the service.</p>
-  <p>To see or delete your data, email <a href="mailto:nick.wild3@gmail.com">nick.wild3@gmail.com</a>.</p>
 
   <h2>Contact</h2>
   <p>Nicholas Wild<br>London, United Kingdom<br><a href="mailto:nick.wild3@gmail.com">nick.wild3@gmail.com</a></p>
+
+  <h2 id="privacy">Privacy</h2>
+  <p>Tango Coordinator provides a WhatsApp assistant that tango schools use to organise their classes. We keep only what is needed to do that:</p>
+  <ol>
+    <li>the student's WhatsApp number and <strong>first name only</strong> (we never store surnames),</li>
+    <li>their bookings and, if they tell us, the city or time zone they live in, and</li>
+    <li>recent messages, so the assistant can follow the conversation.</li>
+  </ol>
+  <p>If you ask for reminders and updates, we keep your number and first name so we can send them, until you reply STOP. Messages are deleted after 7 days, and bookings 90 days after the lesson. A weekly backup of bookings is kept for up to a month. Attendance pages show first names only, never phone numbers. We do not sell data, show adverts or use tracking. Messages and bookings are processed by our service providers only to provide the service: Meta (WhatsApp), Twilio (WhatsApp, during testing), Anthropic (the AI that reads the messages), Render (hosting, EU) and Neon (database). Each school is responsible for its own students' data; we process it on the school's behalf.</p>
+  <p>To see or delete your data, email <a href="mailto:nick.wild3@gmail.com">nick.wild3@gmail.com</a>.</p>
 
   <footer>© 2026 Nicholas Wild, trading as Tango Coordinator.</footer>
 </main>
